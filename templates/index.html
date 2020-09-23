@@ -1,0 +1,87 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Text Utilities</title>
+
+
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ff9245;">
+        <a class="navbar-brand" href="#">TextUtils</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="features">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tutorials">Tutorials</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<body>
+    <div class="alert alert-primary" role="alert">
+        Welcome to TextUtils! Get amazing Text Utilities here.
+    </div>
+    <div class="container">
+        <form method="post" action="/analyzed"> {% csrf_token %}
+
+            <div class="form-group">
+                <label for="input">Enter your desired text below!</label>
+                <textarea class="form-control" id="input" rows="6" name="input"></textarea>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="pr" name="pr">
+                <label class="custom-control-label" for="pr">Punctuation Remover</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="nlr" name="nlr">
+                <label class="custom-control-label" for="nlr">New Line Remover</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="cnt" name="cnt">
+                <label class="custom-control-label" for="cnt">Get Character Count</label>
+            </div>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="sr" name="sr">
+                <label class="custom-control-label" for="sr">Space Remover</label>
+            </div>
+            <div class="switch-field">
+                <input type="radio" id="def" name="case" value="d" checked />
+                <label for="def">Default</label>
+                <input type="radio" id="up" name="case" value="u" />
+                <label for="up">UPPERCASE</label>
+                <input type="radio" id="low" name="case" value="l" />
+                <label for="low">lowercase</label>
+            </div>
+            <button class="submit"><span>Submit</span></button>
+
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
