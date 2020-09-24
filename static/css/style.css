@@ -1,7 +1,7 @@
 body{
     background-color: #E2E8DD;
 }
-button {
+.submit {
     border-radius: 4px;
     background-color: #ff9245;
     border: none;
@@ -15,14 +15,14 @@ button {
     margin: 5px;
 }
 
-button span {
+.submit span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
-button span:after {
+.submit span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -31,11 +31,11 @@ button span:after {
     transition: 0.5s;
 }
 
-button:hover span {
+.submit:hover span {
     padding-right: 25px;
 }
 
-button:hover span:after {
+.submit:hover span:after {
     opacity: 1;
     right: 0;
 }

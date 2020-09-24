@@ -25,7 +25,6 @@ def removeNewLine(text):
     for ch in text:
         if ch != '\n' and ch != '\r':
             remN += ch
-    print(remN)
     return remN
 
 
