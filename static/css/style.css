@@ -1,6 +1,40 @@
-body{
-    background-color: #E2E8DD;
+* {
+    box-sizing: border-box;
 }
+
+html, body {
+    background-color: #E2E8DD;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* github fork icon */
+
+.github-corner svg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    mix-blend-mode: darken;
+    color: #ffffff;
+    fill: #000000;
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave .56s;
+}
+
+@keyframes octocat-wave {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    20%, 60% {
+        transform: rotate(-20deg);
+    }
+    40%, 80% {
+        transform: rotate(10deg);
+    }
+}
+
 .submit {
     border-radius: 4px;
     background-color: #ff9245;
@@ -8,11 +42,11 @@ body{
     color: #000000;
     text-align: center;
     font-size: 25px;
-    padding: 20px;
-    width: 300px;
+    padding: 10px;
+    width: 280px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 5px;
+    margin-bottom: 6%;
 }
 
 .submit span {
@@ -42,12 +76,12 @@ body{
 
 .switch-field {
     display: flex;
-    margin-bottom: 36px;
+    margin-bottom: 20px;
     overflow: hidden;
 }
 
 .switch-field input {
-    position: absolute !important;
+    position: absolute;
     clip: rect(0, 0, 0, 0);
     height: 1px;
     width: 1px;
@@ -84,17 +118,199 @@ body{
 .switch-field label:last-of-type {
     border-radius: 0 4px 4px 0;
 }
-pre{
-font-size: large;
-word-wrap: break-word;
-background-color: white;
-min-height: 100px;
-height: auto;
-width: auto;
+
+pre {
+    font-size: large;
+    background-color: white;
+    min-height: 100px;
+    height: auto;
+    width: auto;
+    word-break: break-word;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-word;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
 }
-pre.analyzed{
-        border: lightblue 4px solid;
-      }
-pre.original{
-        border: #ff9245 4px solid;
-      }
+
+pre.analyzed {
+    border: lightblue 4px solid;
+}
+
+pre.original {
+    border: #ff9245 4px solid;
+}
+
+.symbol {
+    /* display: block; */
+    text-align: center;
+    height: 148px;
+    max-height: 148px;
+    margin-bottom: 0em;
+    font-weight: 700;
+    font-size: 84px;
+    color: green;
+    
+}
+/* footer */
+
+.footer {
+    position: absolute;
+    bottom: 0%;
+    /* background-color: #264653; */
+    background-color: #370617;
+    /* color: white; */
+    /* background-color: white; */
+    text-align: center;
+    height: 50px;
+    width: 100%;
+}
+
+.footer-content {
+    margin-top: 5px;
+}
+
+/*
+ * Social Buttons for Bootstrap
+ *
+ * Copyright 2013-2016 Panayiotis Lipiridis
+ * Licensed under the MIT License
+ *
+ * https://github.com/lipis/bootstrap-social
+ */
+
+.btn-github {
+    color: #fff;
+    background-color: #444;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-github:focus, .btn-github.focus {
+    color: #fff;
+    background-color: #2b2b2b;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-github:hover {
+    color: #fff;
+    background-color: #2b2b2b;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-github:active, .btn-github.active, .open>.dropdown-toggle.btn-github {
+    color: #fff;
+    background-color: #2b2b2b;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-github:active:hover, .btn-github.active:hover, .open>.dropdown-toggle.btn-github:hover, .btn-github:active:focus, .btn-github.active:focus, .open>.dropdown-toggle.btn-github:focus, .btn-github:active.focus, .btn-github.active.focus, .open>.dropdown-toggle.btn-github.focus {
+    color: #fff;
+    background-color: #191919;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-github:active, .btn-github.active, .open>.dropdown-toggle.btn-github {
+    background-image: none
+}
+
+.btn-github.disabled:hover, .btn-github[disabled]:hover, fieldset[disabled] .btn-github:hover, .btn-github.disabled:focus, .btn-github[disabled]:focus, fieldset[disabled] .btn-github:focus, .btn-github.disabled.focus, .btn-github[disabled].focus, fieldset[disabled] .btn-github.focus {
+    background-color: #444;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-github .badge {
+    color: #444;
+    background-color: #fff
+}
+
+.btn-instagram {
+    color: #fff;
+    background-color: #3f729b;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-instagram:focus, .btn-instagram.focus {
+    color: #fff;
+    background-color: #305777;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-instagram:hover {
+    color: #fff;
+    background-color: #305777;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-instagram:active, .btn-instagram.active, .open>.dropdown-toggle.btn-instagram {
+    color: #fff;
+    background-color: #305777;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-instagram:active:hover, .btn-instagram.active:hover, .open>.dropdown-toggle.btn-instagram:hover, .btn-instagram:active:focus, .btn-instagram.active:focus, .open>.dropdown-toggle.btn-instagram:focus, .btn-instagram:active.focus, .btn-instagram.active.focus, .open>.dropdown-toggle.btn-instagram.focus {
+    color: #fff;
+    background-color: #26455d;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-instagram:active, .btn-instagram.active, .open>.dropdown-toggle.btn-instagram {
+    background-image: none
+}
+
+.btn-instagram.disabled:hover, .btn-instagram[disabled]:hover, fieldset[disabled] .btn-instagram:hover, .btn-instagram.disabled:focus, .btn-instagram[disabled]:focus, fieldset[disabled] .btn-instagram:focus, .btn-instagram.disabled.focus, .btn-instagram[disabled].focus, fieldset[disabled] .btn-instagram.focus {
+    background-color: #3f729b;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-instagram .badge {
+    color: #3f729b;
+    background-color: #fff
+}
+
+.btn-linkedin {
+    color: #fff;
+    background-color: #007bb6;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-linkedin:focus, .btn-linkedin.focus {
+    color: #fff;
+    background-color: #005983;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-linkedin:hover {
+    color: #fff;
+    background-color: #005983;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-linkedin:active, .btn-linkedin.active, .open>.dropdown-toggle.btn-linkedin {
+    color: #fff;
+    background-color: #005983;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-linkedin:active:hover, .btn-linkedin.active:hover, .open>.dropdown-toggle.btn-linkedin:hover, .btn-linkedin:active:focus, .btn-linkedin.active:focus, .open>.dropdown-toggle.btn-linkedin:focus, .btn-linkedin:active.focus, .btn-linkedin.active.focus, .open>.dropdown-toggle.btn-linkedin.focus {
+    color: #fff;
+    background-color: #00405f;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-linkedin:active, .btn-linkedin.active, .open>.dropdown-toggle.btn-linkedin {
+    background-image: none
+}
+
+.btn-linkedin.disabled:hover, .btn-linkedin[disabled]:hover, fieldset[disabled] .btn-linkedin:hover, .btn-linkedin.disabled:focus, .btn-linkedin[disabled]:focus, fieldset[disabled] .btn-linkedin:focus, .btn-linkedin.disabled.focus, .btn-linkedin[disabled].focus, fieldset[disabled] .btn-linkedin.focus {
+    background-color: #007bb6;
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+.btn-linkedin .badge {
+    color: #007bb6;
+    background-color: #fff
+}
