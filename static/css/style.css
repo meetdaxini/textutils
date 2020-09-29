@@ -74,6 +74,14 @@ html, body {
     right: 0;
 }
 
+.back span:after {
+    content: '\00ab';
+}
+
+.tut {
+    margin-left: 45px;
+}
+
 .switch-field {
     display: flex;
     margin-bottom: 20px;
@@ -154,17 +162,14 @@ pre.original {
     font-weight: 700;
     font-size: 84px;
     color: green;
-    
 }
+
 /* footer */
 
 .footer {
     position: absolute;
     bottom: 0%;
-    /* background-color: #264653; */
     background-color: #370617;
-    /* color: white; */
-    /* background-color: white; */
     text-align: center;
     height: 50px;
     width: 100%;
