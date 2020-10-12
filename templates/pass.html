@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Password Generator</title>
+{% endblock title%}
+
+{% block header %}
+<ul class="navbar-nav">
+  <li class="nav-item">
+    <a class="nav-link" href="/">Home</a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="#">Password Generator<span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="/tutorials">Tutorials</a>
+  </li>
+</ul>
+{% endblock header%}
+
+{% block content %}
+<div class="alert alert-primary" role="alert">
+  Welcome to TextUtils! Get your random & secure passwords here.
+</div>
+<div class="container">
+  <form method="GET" action="{% url 'pass-gen' %}">
+    <div class="form-group">
+      <label>Enter your choices below!</label>
+      <br>
+      <select name="length">
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12" selected="selected">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+      </select> Length
+    </div>
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="up" name="up">
+      <label class="custom-control-label" for="up">Uppercase</label>
+    </div>
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="num" name="num">
+      <label class="custom-control-label" for="num">Digits</label>
+    </div>
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="custom-control-input" id="sp" name="sp">
+      <label class="custom-control-label" for="sp">Special Characters</label>
+    </div>
+    <br>
+    <button class="submit"><span>Generate Password</span></button>
+</div>
+<br>
+<br>
+<br>
+<br>
+</form>
+
+
+
+<!-- <br><button onclick="window.location.href='/';" class="submit back"><span>Back</span></button> -->
+
+{% endblock content%}

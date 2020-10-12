@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Analyzed</title>
+<title>Generated Password</title>
 {% endblock title %}
 
 {% block header %}
@@ -23,18 +23,11 @@
 
   <div class="out">
     <br>
-    <h3>Here is your analyzed text:</h3><br>
-    <pre class="analyzed">{{ anText }}</pre>
-    <br> {{ anCnt }}
-  </div>
-  <div class="out">
-    <br>
-    <h3>Here is your original text:</h3><br>
-    <pre class="original">{{ ogText }}</pre>
-    <br>{{ogCnt}}
+    <h3>Here is your password:</h3><br>
+    <pre class="analyzed">{{ password }}</pre>
   </div>
 
-  <br><br><button onclick="window.location.href='/';" class="submit back"><span>Back</span></button>
+  <br><br><button onclick="history.back(-1)" class="submit back"><span>Back</span></button>
   <br>
   <br>
   <br>
