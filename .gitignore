@@ -2,6 +2,7 @@
 .Python
 venv/
 env/
+.env
 *.sqlite3
 .idea/
 # Project asset folders
@@ -14,5 +15,5 @@ db.sqlite3
 __pycache__/
 *.py[cod]
 *$py.class
-#django admin
+#django admin and all static files
 staticfiles
